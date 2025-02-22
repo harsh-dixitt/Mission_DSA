@@ -3,7 +3,7 @@ package com.tuf;
 public class RepeatedElements {
 	static void findRepeatingElements(int arr[]) {
 		int count = 0;
-		int[] dup = new int[arr.length];
+		int[] dup = new int[arr.length]; // Array to store duplicate elements
 		for (int i = 0; i < arr.length - 1; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
 				if (arr[i] == arr[j])
