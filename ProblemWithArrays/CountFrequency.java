@@ -10,22 +10,26 @@ public class CountFrequency {
 	  }
 	public static void countFreq(int arr[], int n)
 	{
+		// Declare visited Array
 	    boolean visited[] = new boolean[n];
 	 
+		// Outer Loop (Iterating Through arr)
 	    for (int i = 0; i < n; i++) {
 	 
-	        // Skip this element if already processed
+	        // Skip this element if already processed/counted
 	        if (visited[i] == true)
 	            continue;
 	 
 	        // Count frequency
 	        int count = 1;
+			// Inner Loop for Counting Frequency
 	        for (int j = i + 1; j < n; j++) {
 	            if (arr[i] == arr[j]) {
 	                visited[j] = true;
 	                count++;
 	            }
 	        }
+			// Print Frequency
 	        System.out.println(arr[i] + "-> " + count);
 	    }
 	}
